@@ -3,7 +3,6 @@
  * This is the ONLY object exposed to outside - must run init to activate identityManager and
  */
 var express = require('express'),
-    _ = require('lodash'),
     request = require('request'),
     utils = require('../utils'),
     security = require('../security'),

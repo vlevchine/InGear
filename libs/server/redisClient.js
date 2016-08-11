@@ -5,9 +5,6 @@ var redis = require('redis'),
     bluebird = require('bluebird'),
     logger = require('./logger').getLogger();
 
-bluebird.promisifyAll(redis.RedisClient.prototype);
-bluebird.promisifyAll(redis.Multi.prototype);
-
 function createClient(redisConfig, name) {
     if (!redisConfig) {
         throw 'Redis config missing.'
